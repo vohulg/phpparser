@@ -1,0 +1,11 @@
+[28-Apr-2014 14:07:53 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in C:\php5\my.php on line 77
+[28-Apr-2014 15:42:06 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:45:39 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:45:52 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:46:37 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:47:09 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:47:27 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 76
+[28-Apr-2014 15:49:22 UTC] PHP Notice:  Undefined property: stdClass::$ccaddress in C:\php5\my.php on line 77
+[28-Apr-2014 16:36:47 UTC] PHP Notice:  Undefined offset: 1 in C:\php5\my.php on line 77
+[28-Apr-2014 16:36:47 UTC] PHP Notice:  Trying to get property of non-object in C:\php5\my.php on line 77
+[28-Apr-2014 16:36:47 UTC] PHP Notice:  Undefined variable: tmp1 in C:\php5\my.php on line 81
