@@ -9,3 +9,149 @@
 [28-Apr-2014 16:36:47 UTC] PHP Notice:  Undefined offset: 1 in C:\php5\my.php on line 77
 [28-Apr-2014 16:36:47 UTC] PHP Notice:  Trying to get property of non-object in C:\php5\my.php on line 77
 [28-Apr-2014 16:36:47 UTC] PHP Notice:  Undefined variable: tmp1 in C:\php5\my.php on line 81
+[28-May-2014 09:49:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:49:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:49:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:49:15 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 189
+[28-May-2014 09:50:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:50:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:50:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:50:33 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 189
+[28-May-2014 09:50:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:50:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:50:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:51:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:51:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 09:51:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:16:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:16:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:16:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:16:54 UTC] PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'UTC' for '6.0/no DST' instead in C:\Qt\qt-proj\phpparser\my.php on line 3
+[28-May-2014 10:16:54 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 191
+[28-May-2014 10:17:32 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:17:32 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:17:32 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:17:32 UTC] PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'UTC' for '6.0/no DST' instead in C:\Qt\qt-proj\phpparser\my.php on line 3
+[28-May-2014 10:17:32 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 191
+[28-May-2014 10:18:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:18:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:18:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:18:54 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 192
+[28-May-2014 10:19:26 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:26 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:26 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:26 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:19:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:30 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:19:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:33 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:19:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:19:54 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:20:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:14 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:14 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:20:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:30 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:20:30 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 193
+[28-May-2014 10:21:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:21:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:21:54 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:21:54 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 194
+[28-May-2014 10:22:58 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:22:58 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:22:58 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:22:58 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 194
+[28-May-2014 10:23:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:23:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:23:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:23:16 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 194
+[28-May-2014 10:24:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:07 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 197
+[28-May-2014 10:24:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:33 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:47 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:47 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 197
+[28-May-2014 10:24:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:57 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:24:57 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 197
+[28-May-2014 10:25:10 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_curl.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:25:10 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_imap.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:25:10 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php5\ext\php_mbstring.dll' - Не найден указанный модуль.
+ in Unknown on line 0
+[28-May-2014 10:25:10 UTC] PHP Fatal error:  Call to undefined function curl_init() in C:\Qt\qt-proj\phpparser\my.php on line 197

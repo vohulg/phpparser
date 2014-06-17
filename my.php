@@ -1,6 +1,7 @@
 <?php
 
-// ----------- block for tsting------------------//
+
+// ----------- block for testing------------------//
 
 //$str = file_get_contents("result.htm");
 //$js = json_decode($str, true);
@@ -10,18 +11,28 @@
 //var_dump($js);
 
 //get_str ();
-foo_imap();
-return 1;
+//foo_imap();
+//return 1;
 
 // ----------- block for tsting------------------//
 
 $fd = fopen("result.htm", "w+");
 
 $url = "http://e.mail.ru/cgi-bin/auth"; 
- authorization ($url);
+
+ $rs = authorization ($url);
+
+
+
+
+
+//-------------------------//
    
  $url = "https://e.mail.ru/agent/archive";
  $rs = get_agent_list($url);
+
+ fwrite($fd, $rs);
+ return 1;
  
  
  $url = "https://webarchive.mail.ru/iframe?history_enabled=1";
@@ -182,19 +193,24 @@ if ($headers == false) {
 }
 
 function authorization ($url) {
+
+
+
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 	curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
 	curl_setopt($ch, CURLOPT_FAILONERROR, 1); 
-	curl_setopt($ch, CURLOPT_VERBOSE, 1);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects 
+        curl_setopt($ch, CURLOPT_VERBOSE, 1);
+        //curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
 	curl_setopt($ch, CURLOPT_TIMEOUT, 10); // times out after 4s 
-	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+        //curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
 	curl_setopt($ch, CURLOPT_POST, 1); // set POST method 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, "Login=testov-79&Domain=mail.ru&Password=testtest"); // add POST fields 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "Login=testov-79&Domain=mail.ru&Password=testtest"); // add POST fields
 	curl_setopt($ch, CURLOPT_COOKIEJAR, '/cookie.txt');
 	$result = curl_exec($ch); // run the whole process 
+
+
 	
 	curl_close($ch); 
 	
@@ -216,6 +232,7 @@ function get_agent_list ($url)
 	curl_setopt($ch, CURLOPT_COOKIEJAR, '/cookie2.txt');
 	curl_setopt($ch, CURLOPT_COOKIEFILE, '/cookie.txt');
 	$result = curl_exec($ch); // run the whole process 
+	$ch.cookie("sess_id");
 	curl_close($ch); 
 	return $result;
 	
