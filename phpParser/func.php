@@ -48,7 +48,7 @@ function getAuthJavaScript($url, $fileCookieIn)
 	curl_setopt($ch, CURLOPT_TIMEOUT, 10); // times out after 4s 
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
 	curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieIn);  //В какой файл записывать
-       curl_setopt($ch, CURLOPT_VERBOSE, 1);
+        //curl_setopt($ch, CURLOPT_VERBOSE, 1);
 	$result = curl_exec($ch); // run the whole process 
 	curl_close($ch); 
 	return $result;    
@@ -83,34 +83,110 @@ function printDebug($param)
 
 function postAuth($url, $idCreepy, $fileCookieIn, $fileCookieOut)
 {
+  $request = "email=vohulg@gmail.com&password=19791979&cookies=&rememberMe=1&id=".$idCreepy;
+   $ch = curl_init(); 
+    curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
+    //curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10); // times out after 4s 
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+    curl_setopt($ch, CURLOPT_POST, 1); // set POST method 
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $request); // add POST fields
+    curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieIn);
+    curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieOut);
+    curl_setopt($ch, CURLOPT_REFERER, "http://kolesa.kz/passport/login");
+    curl_setopt($ch,CURLOPT_HTTPHEADER,array('Origin: http://kolesa.kz'));
+    $result = curl_exec($ch); // run the whole process 
+    curl_close($ch);   
+}
+
+function postCreate($url,$fileCookieCreateIn, $fileCookieCreateIn)
+{
+    $boundary = '-----------------------------192278645511';
+    $data = array('cat' => 'spare.parts', 'uuid' => '', 
+        'das[spare.name]'=>'Стекло',
+        'das[text]'=> 'все запчасти на прадо',
+        'das[multiple.select]' => '{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}',
+        'das[region.list]' => '1',
+        'das[map.lat]' => '',
+        'das[map.lon]' => '',
+        'das[map.zoom]' => '12',
+        'das[map.name]' => '',
+        'das[map.type]' => '',
+        'file[]' => '',
+        '_phones[0][cCode]' => '+7',
+        '_phones[0][code]' => '707',
+        '_phones[0][number]' => '7893057',
+        '_phones[0][cCode]' => '+7',
+        '_phones[0][code]' => '',
+        '_phones[0][number]' => '',
+        'das[email]' => 'vohulg@gmail.com',
+        'das[comments_allowed_for]' => '2',
+        'das[has_change]' => '0',       
         
-    //$request = "email=vohulg%40gmail.com&password=19791979&cookies=&rememberMe=1&id=".$idCreepy;
-    $request = "email=vohulg@gmail.com&password=19791979&cookies=&rememberMe=1&id=".$idCreepy;
-     
-    printDebug($request);
+        );
+    $body = multipart_build_query($data, $boundary);
     
-    $ch = curl_init(); 
-        
-	curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
-       
-	curl_setopt($ch, CURLOPT_VERBOSE, 1);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
-	curl_setopt($ch, CURLOPT_TIMEOUT, 10); // times out after 4s 
-        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
-	curl_setopt($ch, CURLOPT_POST, 1); // set POST method 
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $request); // add POST fields
-	curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieIn);
-	curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieOut);
-        curl_setopt($ch, CURLOPT_REFERER, "http://kolesa.kz/passport/login");
-        curl_setopt($ch,CURLOPT_HTTPHEADER,array('Origin: http://kolesa.kz'));
-        
-	$result = curl_exec($ch); // run the whole process 
-        curl_close($ch);
+    printDebug($body);
     
+    
+    /*
+     cat	spare.parts
+id	
+uuid	
+das[spare.name]	Зеркало на прадо
+das[text]	зеркало на прадо 78 левое
+das[multiple.select]	{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}
+das[region.list]	1
+das[region]	Алматы
+das[map.lat]	
+das[map.lon]	
+das[map.zoom]	12
+das[map.name]	
+das[map.type]	
+file[]	
+_phones[0][cCode]	+7
+_phones[0][code]	727
+_phones[0][number]	3797592
+_phones[1][cCode]	+7
+_phones[1][code]	
+_phones[1][number]	
+_phones[2][cCode]	+7
+_phones[2][code]	
+_phones[2][number]	
+das[email]	vohulg@gmail.com
+das[comments_allowed_for]	2
+das[has_change]	0
+     */
+    
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: multipart/form-data; boundary=$boundary"));
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+    curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieCreateIn);
+    curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieCreateIn);
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);   
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable
+    $response = curl_exec($ch);
     
 }
 
+function multipart_build_query($fields, $boundary){
+$retval = '';
+foreach($fields as $key => $value)
+    {
+        if ($key == 'file[]')
+            $retval .= "$boundary\r\nContent-Disposition: form-data; name=\"$key\";filename=''\r\nContent-Type: application/octet-stream\r\n\r\n$value\r\n";
+        
+        else 
+            $retval .= "$boundary\r\nContent-Disposition: form-data; name=\"$key\"\r\n\r\n$value\r\n";
+    }
+$retval .= "--$boundary--";
+return $retval;
+}
 
 function getProfile($url, $fileCookieOut)
 {

@@ -54,9 +54,9 @@ printDebug("idCreepy:".$idCreepy);
 
 // -----третий post запрос на авторизацию------------------------//
 $url = "http://id.creepycrux.com/login.json";
-$fileCookieIn = "cookieAuthIn.txt";
-$fileCookieOut = "cookieCreepy.txt";
-$res = postAuth ($url, $idCreepy, $fileCookieIn, $fileCookieOut);
+$fileCookieTimeOutIn = "cookieAuthIn.txt";
+$fileCookieTimeOutOut = "cookieCreepy.txt";
+$res = postAuth ($url, $idCreepy, $fileCookieTimeOutIn, $fileCookieTimeOutOut);
 
 
 // ---- четвертый промежуточный запрос на получение kluid -----//
@@ -74,7 +74,20 @@ $res = getTimeout($url, $fileCookieIn, $fileCookieOut );
 
 // ----- запрос на получение web страницы профиля ------- //
 
-$url = "http://kolesa.kz/my";
-$res = getProfile($url, $fileCookieIn);
 
-printDebug($res);
+//$res = getProfile($url, $fileCookieIn);
+
+
+
+
+// ---- post запрос на создание нового объявления
+
+$url = "http://kolesa.kz/a/create";
+$fileCookieCreateIn = "cookieCreateIn.txt";
+$fileCookieCreateOut = $fileCookieTimeOutIn;
+  postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut);
+
+//$url = "http://kolesa.kz/a/new?cat=spare.parts";
+
+//http://scraperblog.blogspot.com/2013/07/php-curl-multipart-form-posting.html - пример заполнения формы
+
