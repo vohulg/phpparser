@@ -104,10 +104,11 @@ function postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut)
 {
       
     $boundary = '--192278645511';
-    $data = array('cat' => 'spare.parts', 'uuid' => '', 
+    $data = array('cat' => 'spare.parts', 
+        'uuid' => '', 
         'das[spare.name]'=>'Стекло',
         'das[text]'=> 'все запчасти на прадо',
-        //'das[multiple.select]' => '{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}',
+        'das[multiple.select]' => '{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}',
         'das[region.list]' => '1',
         'das[map.lat]' => '',
         'das[map.lon]' => '',
@@ -118,15 +119,14 @@ function postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut)
         '_phones[0][cCode]' => '+7',
         '_phones[0][code]' => '707',
         '_phones[0][number]' => '7893057',
-        '_phones[0][cCode]' => '+7',
-        '_phones[0][code]' => '',
-        '_phones[0][number]' => '',
         'das[email]' => 'vohulg@gmail.com',
         'das[comments_allowed_for]' => '2',
         'das[has_change]' => '0',       
         
         );
     $body = multipart_build_query($data, $boundary);
+    
+    printDebug($body);
     
        
     
