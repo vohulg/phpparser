@@ -13,9 +13,8 @@ function getKolesa($url, $fileCookie)
         curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookie); // из какого файла читать
 	$result = curl_exec($ch); // run the whole process 
 	curl_close($ch); 
-	return $result;   
-    
-    
+	return $result; 
+        
 }
 
 function get_creepRequestUrl($str)
@@ -101,13 +100,14 @@ function postAuth($url, $idCreepy, $fileCookieIn, $fileCookieOut)
     curl_close($ch);   
 }
 
-function postCreate($url,$fileCookieCreateIn, $fileCookieCreateIn)
+function postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut)
 {
-    $boundary = '-----------------------------192278645511';
+      
+    $boundary = '--192278645511';
     $data = array('cat' => 'spare.parts', 'uuid' => '', 
         'das[spare.name]'=>'Стекло',
         'das[text]'=> 'все запчасти на прадо',
-        'das[multiple.select]' => '{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}',
+        //'das[multiple.select]' => '{"cars":{"96":{"title":"Toyota","data":{"110":{"title":"Land Cruiser 70","data":{"1":{"title":"<span class=\"generation-years\">1984&nbsp;&mdash;&nbsp;н. в.</span>&nbsp;&nbsp; ","data":{}}}}}}},"engines":{"96":{}}}',
         'das[region.list]' => '1',
         'das[map.lat]' => '',
         'das[map.lon]' => '',
@@ -128,8 +128,7 @@ function postCreate($url,$fileCookieCreateIn, $fileCookieCreateIn)
         );
     $body = multipart_build_query($data, $boundary);
     
-    printDebug($body);
-    
+       
     
     /*
      cat	spare.parts
@@ -163,14 +162,19 @@ das[has_change]	0
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: multipart/form-data; boundary=$boundary"));
     curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
     curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieCreateIn);
-    curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieCreateIn);
+    curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieCreateOut);
     curl_setopt($ch, CURLOPT_VERBOSE, 1);   
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects
     curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable
+    //curl_setopt($ch,CURLOPT_HTTPHEADER,array('Cookie:lastMapLand=yamap'));
+    //curl_setopt($ch,CURLOPT_HTTPHEADER,array('Referer: http://kolesa.kz/a/new?cat=spare.parts'));
     $response = curl_exec($ch);
+    curl_close($ch); 
+    return $response;
     
 }
 
@@ -212,30 +216,55 @@ function getProfile($url, $fileCookieOut)
 function getTimeout($url, $fileCookieIn, $fileCookieOut )
 {
      $ch = curl_init(); 
-	//Referer: http://kolesa.kz/passport/login
-        //curl_setopt($ch, CURLOPT_REFERER, true);
-        curl_setopt($ch, CURLOPT_HEADER, true);
+	 curl_setopt($ch, CURLOPT_HEADER, true);
        curl_setopt($ch, CURLOPT_REFERER, "http://kolesa.kz/passport/login");
 	curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
-	//curl_setopt($ch, CURLOPT_FAILONERROR, 1); 
-	curl_setopt($ch, CURLOPT_VERBOSE, 1);
-	//curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects 
+		//curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
         curl_setopt($ch, CURLOPT_ENCODING,"gzip, deflate"); 
-        //curl_setopt($ch, CURLOPT_ACCEPT,"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-        //Accept: 
-               
-
-
-       
-         //curl_setopt($ch, CURLOPT_ACCEPT_ENCODING, "gzip"); // return into a variable 
-	//curl_setopt($ch, CURLOPT_TIMEOUT, 10); // times out after 4s 
-	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+          curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
 	curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieIn);
 	//curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieOut);
 	$result = curl_exec($ch); // run the whole process 
 	curl_close($ch); 
-	return $result;   
+	return $result;       
     
+}
+
+function getCreateNew($url, $fileCookieNewIn, $fileCookieNewOut )
+{
+    $ch = curl_init(); 
+	 curl_setopt($ch, CURLOPT_HEADER, true);
+       	curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
+	curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
+        //curl_setopt($ch, CURLOPT_ENCODING,"gzip, deflate"); 
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+	curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieNewIn);
+	curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieNewOut);
+	$result = curl_exec($ch); // run the whole process 
+	curl_close($ch); 
+	return $result;  
+    
+    
+}
+
+function getCreateSpare($url, $fileCookieCreateNewIn, $fileCookieCreateNewOut )
+{
+    $ch = curl_init(); 
+	 curl_setopt($ch, CURLOPT_HEADER, true);
+       	curl_setopt($ch, CURLOPT_URL,$url); // set url to post to 
+	curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);// allow redirects 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); // return into a variable 
+        curl_setopt($ch, CURLOPT_ENCODING,"gzip, deflate"); 
+          curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+	curl_setopt($ch, CURLOPT_COOKIEJAR, $fileCookieCreateNewIn);
+	curl_setopt($ch, CURLOPT_COOKIEFILE, $fileCookieCreateNewOut);
+	$result = curl_exec($ch); // run the whole process 
+	curl_close($ch); 
+	return $result;  
     
 }

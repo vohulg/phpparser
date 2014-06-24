@@ -72,20 +72,32 @@ $res = getTimeout($url, $fileCookieIn, $fileCookieOut );
 //printDebug("getTimeout:".$res);
 
 
-// ----- запрос на получение web страницы профиля ------- //
+
+// -- переход на страниц создания обявления
+$url = "http://kolesa.kz/a/new";
+$fileCookieNewIn = "cookieTimeout.txt";
+$fileCookieNewOut = "cookieTimeout.txt";
+$res = getCreateNew($url, $fileCookieNewIn, $fileCookieNewOut );
+file_put_contents("postNew.htm", $res);
 
 
-//$res = getProfile($url, $fileCookieIn);
-
-
+// ---- переход на страницу заполнения полей
+//http://kolesa.kz/a/new?cat=spare.parts
+$url = "http://kolesa.kz/a/new?cat=spare.parts";
+$fileCookieCreateNewIn = "cookieTimeout.txt";
+$fileCookieCreateNewOut = "cookieTimeout.txt";
+$res = getCreateSpare($url, $fileCookieCreateNewIn, $fileCookieCreateNewOut );
+file_put_contents("postNewSpare.htm", $res);
 
 
 // ---- post запрос на создание нового объявления
 
 $url = "http://kolesa.kz/a/create";
 $fileCookieCreateIn = "cookieCreateIn.txt";
-$fileCookieCreateOut = $fileCookieTimeOutIn;
-  postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut);
+$fileCookieCreateOut = "cookieTimeout.txt";
+$res =   postCreate($url,$fileCookieCreateIn, $fileCookieCreateOut);
+file_put_contents("postCreateResponse.htm", $res);
+
 
 //$url = "http://kolesa.kz/a/new?cat=spare.parts";
 
